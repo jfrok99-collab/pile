@@ -54,6 +54,7 @@
         }
 
         /* CONTAINER */
+
         .piles-container {
             display: flex;
 
@@ -64,10 +65,11 @@
 
             width: 100%;
 
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
 
         /* CARD WRAPPER */
+
         .pile-wrapper {
             display: flex;
             flex-direction: column;
@@ -77,6 +79,7 @@
         }
 
         /* 3D VIEW */
+
         .pile-viewport {
             background-color: transparent;
 
@@ -86,7 +89,8 @@
             perspective: 1000px;
         }
 
-        /* INNER FLIP */
+        /* FLIP */
+
         .pile-inner {
             position: relative;
 
@@ -105,6 +109,7 @@
         }
 
         /* FRONT + BACK */
+
         .pile-front,
         .pile-back {
             position: absolute;
@@ -129,6 +134,7 @@
         }
 
         /* FRONT */
+
         .pile-front {
             background: rgba(255, 255, 255, 0.9);
 
@@ -156,6 +162,7 @@
         }
 
         /* BACK */
+
         .pile-back {
             background-color: #fff;
 
@@ -171,6 +178,7 @@
         }
 
         /* IMAGE */
+
         .pile-back img {
             width: 100%;
 
@@ -186,6 +194,7 @@
         }
 
         /* LIST */
+
         .sentences-list {
             text-align: left;
 
@@ -222,6 +231,7 @@
         }
 
         /* BUTTON */
+
         .btn {
             width: 85%;
 
@@ -270,7 +280,8 @@
                 0 4px 10px rgba(255, 159, 243, 0.2);
         }
 
-        /* FLOAT ANIMATION */
+        /* FLOAT */
+
         @keyframes float {
             0% {
                 transform: translateY(0px);
@@ -287,75 +298,96 @@
 
         /* RESPONSIVE */
 
-        @media (max-width: 1100px) {
+        @media (max-width: 1200px) {
 
             .pile-wrapper {
-                width: 280px;
+                width: 250px;
             }
 
             .pile-viewport {
-                width: 280px;
-                height: 400px;
-            }
-        }
-
-        @media (max-width: 900px) {
-
-            .pile-wrapper {
-                width: 240px;
+                width: 250px;
+                height: 360px;
             }
 
-            .pile-viewport {
-                width: 240px;
-                height: 380px;
+            .pile-back img {
+                height: 130px;
             }
 
             .pile-front h2 {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
+            }
+
+            .sentences-list li {
+                font-size: 0.75rem;
             }
         }
 
         @media (max-width: 768px) {
 
-            .piles-container {
-                gap: 10px;
-            }
-
-            .pile-wrapper {
-                width: 31%;
-                min-width: 110px;
-            }
-
-            .pile-viewport {
-                width: 100%;
-                height: 260px;
-            }
-
-            .pile-front h2 {
-                font-size: 1rem;
-            }
-
-            .cloud-icon {
-                font-size: 2rem;
-            }
-
-            .pile-back img {
-                height: 90px;
-            }
-
-            .sentences-list li {
-                font-size: 0.6rem;
-                padding-left: 16px;
-            }
-
-            .btn {
-                width: 100%;
-                font-size: 0.7rem;
+            body {
                 padding: 10px;
             }
 
             h1 {
+                font-size: 1.1rem;
+                padding: 10px 15px;
+                margin-bottom: 20px;
+            }
+
+            .piles-container {
+                gap: 6px;
+                width: 100%;
+            }
+
+            .pile-wrapper {
+                width: 32%;
+            }
+
+            .pile-viewport {
+                width: 100%;
+                height: 220px;
+            }
+
+            .pile-front,
+            .pile-back {
+                padding: 10px;
+                border-radius: 20px;
+            }
+
+            .cloud-icon {
                 font-size: 1.5rem;
+                margin-bottom: 5px;
+            }
+
+            .pile-front h2 {
+                font-size: 0.75rem;
+                line-height: 1.2;
+            }
+
+            .pile-back img {
+                height: 70px;
+                border-radius: 12px;
+                margin-bottom: 8px;
+            }
+
+            .sentences-list li {
+                font-size: 0.45rem;
+                line-height: 1.2;
+                padding-left: 12px;
+                margin-bottom: 5px;
+            }
+
+            .sentences-list li::before {
+                font-size: 0.5rem;
+                top: 0;
+            }
+
+            .btn {
+                width: 100%;
+                font-size: 0.55rem;
+                padding: 7px;
+                margin-top: 10px;
+                border-radius: 15px;
             }
         }
     </style>
@@ -368,6 +400,7 @@
     <div class="piles-container">
 
         <!-- PILE 1 -->
+
         <div class="pile-wrapper">
 
             <div class="pile-viewport">
@@ -375,9 +408,11 @@
                 <div class="pile-inner" id="pile1">
 
                     <div class="pile-front">
+
                         <div class="cloud-icon">☁️</div>
 
                         <h2>မောင့်ကိုမချစ်ရင်</h2>
+
                     </div>
 
                     <div class="pile-back">
@@ -385,11 +420,13 @@
                         <img src="1.jpg" alt="Pile 1 Image">
 
                         <ul class="sentences-list">
+
                             <li>မမရဲ့အချစ်ကိုရဖို့ဆိုတာ တိမ်တွေကိုငေးမောကြည့်နေရသလိုပဲ</li>
 
                             <li>မမမှ မချစ်တော့ဘဲ မောင်အဝေးဆုံးကို ထွက်သွားပေးပါမယ်</li>
 
                             <li>မမ ချစ်တဲ့လူရဲ့ရင်ခွင်မှာ ပျော်ပါစေလို့ ဆုတောင်းပေးပါတယ်</li>
+
                         </ul>
 
                     </div>
@@ -405,6 +442,7 @@
         </div>
 
         <!-- PILE 2 -->
+
         <div class="pile-wrapper">
 
             <div class="pile-viewport">
@@ -412,9 +450,11 @@
                 <div class="pile-inner" id="pile2">
 
                     <div class="pile-front">
+
                         <div class="cloud-icon">🌸</div>
 
                         <h2>မောင့်ကိုချစ်ရင်</h2>
+
                     </div>
 
                     <div class="pile-back">
@@ -422,11 +462,13 @@
                         <img src="2.jpg" alt="Pile 2 Image">
 
                         <ul class="sentences-list">
+
                             <li>မမကို ဒီနေ့ကစပြီးမောင်ကပိုချစ်သွားပါမယ်</li>
 
                             <li>မမနဲ့အတူဘဝရဲ့ပျော်ရွင်စရာအချိန်တွေ အတူတူကုန်ဆုံးကြမယ်</li>
 
                             <li>မမကိုမောင်ကလူကြီးစုံရာနဲ့ လာတင်တောင်းမယ်</li>
+
                         </ul>
 
                     </div>
@@ -442,6 +484,7 @@
         </div>
 
         <!-- PILE 3 -->
+
         <div class="pile-wrapper">
 
             <div class="pile-viewport">
@@ -449,9 +492,11 @@
                 <div class="pile-inner" id="pile3">
 
                     <div class="pile-front">
+
                         <div class="cloud-icon">✨</div>
 
                         <h2>သူငယ်ချင်းလိုပဲဆက်နေမယ်ဆိုရင်</h2>
+
                     </div>
 
                     <div class="pile-back">
@@ -459,11 +504,13 @@
                         <img src="3.jpg" alt="Pile 3 Image">
 
                         <ul class="sentences-list">
+
                             <li>မမက မောင့်ကိုမရွေးလည်း မောင့်ကမမကိုပဲချစ်မှာပါ</li>
 
                             <li>ဒါပေမဲ့ သူငယ်ချင်းလိုနေဖို့ မောင့်မှာအင်အားမရှိဘူး</li>
 
                             <li>ပေါင်းဖက်ခွင့်မရှိပေမဲ့ အဝေးကနေပဲချစ်နေမှာပါ</li>
+
                         </ul>
 
                     </div>
